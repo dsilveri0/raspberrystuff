@@ -16,7 +16,9 @@ try:
 
     while True:
        sleep(1)
-       getLumPercentage()
+       print(getLumPercentage())
+
+
 
         # for i in range(0, 10):
         #    sleep(1)
