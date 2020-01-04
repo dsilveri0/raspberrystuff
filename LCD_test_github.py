@@ -41,14 +41,14 @@ class PCF8574_I2C(object):
 def loop():
 	mcp = PCF8574_I2C(0x27)
 	while True:
-		#mcp.writeByte(0xff)
-		mcp.digitalWrite(3,1)
-		print ('Is 0xff? %x'%(mcp.readByte()))
-		time.sleep(1)
-		mcp.writeByte(0x00)
+		mcp.writeByte(0xff)
+		#mcp.digitalWrite(3,1)
+		#print ('Is 0xff? %x'%(mcp.readByte()))
+		#time.sleep(1)
+		#mcp.writeByte(0x05)
 		#mcp.digitalWrite(7,1)
-		print ('Is 0x00? %x'%(mcp.readByte()))
-		time.sleep(1)
+		#print ('Is 0x00? %x'%(mcp.readByte()))
+		#time.sleep(1)
 		
 class PCF8574_GPIO(object):#Standardization function interface
 	OUT = 0
