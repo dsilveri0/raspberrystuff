@@ -9,7 +9,7 @@ def initArrayLED():
 def setAllLedsHigh():
     for led in leds:
         GPIO.output(led, 1)
-    
+
 def setAllLedsLow():
     for led in leds:
         GPIO.output(led, 0)

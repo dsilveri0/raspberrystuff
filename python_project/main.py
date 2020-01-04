@@ -26,7 +26,7 @@ try:
 
         sleep(1)
         variableRangeLED(6)
-  
+
         sleep(1)
         variableRangeLED(8)
 
