@@ -3,7 +3,8 @@ from time import sleep
 import requests
 from datetime import datetime
 
-from led_array import *
+from led_array_module import *
+from temp_lumi_module import *
 
 GPIO.setmode(GPIO.BCM)
 
@@ -14,9 +15,12 @@ try:
     print("Control+C para terminar.")
 
     while True:
-        for i in range(0, 10):
-            sleep(1)
-            updateProgressBar(i)
+       sleep(1)
+       getLumPercentage()
+
+        # for i in range(0, 10):
+        #    sleep(1)
+        #    updateProgressBar(i)
 
 except KeyboardInterrupt:
     print("\nPrograma terminado pelo utilizador.")
