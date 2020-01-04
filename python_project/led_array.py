@@ -22,5 +22,6 @@ def setLEDLow(num):
     GPIO.output(leds[num], 0)
 
 def variableRangeLED(num):
-    for i in range(0, num)
-        GPIO.output(leds[num], 0)
+    setAllLedsLow()
+    for i in range(0, num+1):
+        setLEDHigh(num)

@@ -14,9 +14,21 @@ try:
     print("Control+C para terminar.")
 
     while True:
-        for i in range(0, 9):
-            sleep(1)
-            variableRangeLED(i)
+        #for i in range(0, 10):
+        sleep(1)
+        variableRangeLED(0)
+
+        sleep(1)
+        variableRangeLED(2)
+
+        sleep(1)
+        variableRangeLED(4)
+
+        sleep(1)
+        variableRangeLED(6)
+  
+        sleep(1)
+        variableRangeLED(8)
 
 except KeyboardInterrupt:
     print("\nPrograma terminado pelo utilizador.")
