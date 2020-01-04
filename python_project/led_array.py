@@ -22,6 +22,9 @@ def setLEDLow(num):
     GPIO.output(leds[num], 0)
 
 def variableRangeLED(num):
-    setAllLedsLow()
     for i in range(0, num+1):
-        setLEDHigh(num)
+        setLEDHigh(i)
+
+def updateProgressBar(num):
+    setAllLedsLow()
+    variableRangeLED(num)
