@@ -14,4 +14,5 @@ def getSensorRawData(sensor):
     return value
 
 def getLumPercentage():
-    return getSensorRawData(lumSensor)
+    rawValue = getSensorRawData(lumSensor)
+    return rawvalue/2.5
