@@ -7,9 +7,6 @@ from led_array import *
 
 GPIO.setmode(GPIO.BCM)
 
-#outA = 18
-#GPIO.setup(outA, GPIO.OUT, initial=0)
-
 initArrayLED()
 
 try:
@@ -17,8 +14,7 @@ try:
     print("Control+C para terminar.")
 
     while True:
-        #GPIO.output(outA, 1)
-        setLED0()
+        setAllLEDS()
 
 except KeyboardInterrupt:
     print("\nPrograma terminado pelo utilizador.")
