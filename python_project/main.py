@@ -10,19 +10,18 @@ GPIO.setmode(GPIO.BCM)
 
 initArrayLED()
 
+def luminosityDisplayControl():
+    percent = getLumPercentage()
+    print(percent)
+    updateProgressBar(round(percent/10))        
+
 try:
     sleep(0.2)
     print("Control+C para terminar.")
 
     while True:
-       sleep(1)
-       print(getLumPercentage())
-
-
-
-        # for i in range(0, 10):
-        #    sleep(1)
-        #    updateProgressBar(i)
+        sleep(1)
+        luminosityDisplayControl()
 
 except KeyboardInterrupt:
     print("\nPrograma terminado pelo utilizador.")
