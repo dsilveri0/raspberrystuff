@@ -23,7 +23,6 @@ def setLEDLow(num):
 
 def variableRangeLED(num):
     for i in range(0, num):
-        print("i VALUE - ", i)
         setLEDHigh(i)
 
 def updateProgressBar(num):
