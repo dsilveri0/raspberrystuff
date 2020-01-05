@@ -17,31 +17,14 @@ def luminosityDisplayControl():
     print(percent)
     updateProgressBar(round(percent/10))        
 
-def temperatureMotorControl():
-    triggerTemp = 10
-    pwmInitial = 25
-    
-    # Equação da reta Y = PWM, X = Temperatura, tal que y = mx +b
-    m = pwmInitial / triggerTemp
-    b = pwmInitial - (m * triggerTemp)
-
-    currentTemp = getTempVoltage()
-    
-    dutyCycle = m * currentTemp + b
-    
-    print("dutycycle", dutyCycle)
-    if (dutyCycle >= pwmInitial):
-        changeSpeedMotor(dutyCycle)
-    else: 
-        stopMotor()
-
 try:
     sleep(0.2)
     print("Control+C para terminar.")
 
     while True:
-        luminosityDisplayControl()
-        temperatureMotorControl()
+        sleep(1)
+        print("Temperature: ", getTempVoltage())        
+        print("Luminosidade: ", getLumPercentage())
 
 except KeyboardInterrupt:
     print("\nPrograma terminado pelo utilizador.")

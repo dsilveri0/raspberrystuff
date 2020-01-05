@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 
-leds = [18, 23, 24, 25, 8, 7, 12, 16, 20, 21]
+leds = [1, 23, 24, 25, 8, 7, 12, 16, 20, 21]
 
 def initArrayLED():
     for led in leds:
@@ -22,7 +22,8 @@ def setLEDLow(num):
     GPIO.output(leds[num], 0)
 
 def variableRangeLED(num):
-    for i in range(0, num+1):
+    for i in range(0, num):
+        print("i VALUE - ", i)
         setLEDHigh(i)
 
 def updateProgressBar(num):
