@@ -5,10 +5,12 @@ from datetime import datetime
 
 from led_array_module import *
 from temp_lumi_module import *
+from motor_control_module import *
 
 GPIO.setmode(GPIO.BCM)
 
 initArrayLED()
+initMotor()
 
 def luminosityDisplayControl():
     percent = getLumPercentage()
@@ -22,6 +24,9 @@ try:
     while True:
         sleep(1)
         luminosityDisplayControl()
+        changeSpeedMotor(25)
+        sleep(5)
+        stopMotor()
 
 except KeyboardInterrupt:
     print("\nPrograma terminado pelo utilizador.")
